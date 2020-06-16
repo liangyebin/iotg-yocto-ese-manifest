@@ -1,5 +1,5 @@
 
-IOTG ESE Yocto BSP Pre-Alpha Release Note
+IOTG ESE Yocto BSP Release Note
 
 This Release Note is divided into 3 section.
 
@@ -33,7 +33,7 @@ $ mkdir <work_dir>
 $ cd <work_dir>
 
 2. Git clone the repo manifest. This manifest will help user to clone all the required repositories to create the base bsp.
-$ repo init -u https://github.com/otcshare/IOTG-Yocto-ESE-Manifest.git -b refs/heads/master -g all
+$ repo init -u https://github.com/intel/iotg-yocto-ese-manifest.git -b refs/heads/master -g all
 
 3. Pull the repository meta-layers (-j4 for simultaneous downloads, increase for more).
 $ repo sync -c -j8 --force-sync
@@ -43,7 +43,7 @@ $ cd <work_dir>/build
 $ . ../intel-embedded-system-enabling-pre/oe-init-build-env .
 
 5. Run bitbake compilation
-$ bitbake multiconfig:x86:core-image-sato-sdk
+$ bitbake mc:x86:core-image-sato-sdk
 
 To change provided kernel to your preferred kernel
 $ cd <work_dir>/build/
